@@ -1,5 +1,5 @@
-# -Evaluation Function Name-
-*Brief description of what this evaluation function does*
+# YourFunctionName
+*Brief description of what this evaluation function does, from the developer perspective*
 
 ## Inputs
 *Specific input parameters which can be supplied when the `eval` command is supplied to this function.*
