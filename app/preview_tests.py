@@ -1,12 +1,12 @@
 import unittest
 
 try:
-    from .evaluation import Params, evaluation_function
+    from .preview import Params, preview_function
 except ImportError:
-    from evaluation import Params, evaluation_function
+    from preview import Params, preview_function
 
 
-class TestEvaluationFunction(unittest.TestCase):
+class TestPreviewFunction(unittest.TestCase):
     """
     TestCase Class used to test the algorithm.
     ---
@@ -21,15 +21,15 @@ class TestEvaluationFunction(unittest.TestCase):
     Read the docs on how to use unittest here:
     https://docs.python.org/3/library/unittest.html
 
-    Use evaluation_function() to check your algorithm works
+    Use preview_function() to check your algorithm works
     as it should.
     """
 
     def test_returns_is_correct_true(self):
-        response, answer, params = None, None, Params()
-        result = evaluation_function(response, answer, params)
+        response, params = None, Params()
+        result = preview_function(response, params)
 
-        self.assertEqual(result.get("is_correct"), True)
+        self.assertEqual(result.get("preview"), response)
 
 
 if __name__ == "__main__":
