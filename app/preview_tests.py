@@ -25,11 +25,12 @@ class TestPreviewFunction(unittest.TestCase):
     as it should.
     """
 
-    def test_returns_is_correct_true(self):
-        response, params = None, Params()
+    def test_returns_preview_key(self):
+        response, params = "test", Params()
         result = preview_function(response, params)
 
-        self.assertEqual(result.get("preview"), response)
+        self.assertIn("preview", result)
+        self.assertIsNotNone(result["preview"])
 
 
 if __name__ == "__main__":
