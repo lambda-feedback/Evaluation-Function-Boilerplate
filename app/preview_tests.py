@@ -13,7 +13,7 @@ class TestPreviewFunction(unittest.TestCase):
     Tests are used here to check that the algorithm written
     is working as it should.
 
-    It's best practise to write these tests first to get a
+    It's best practice to write these tests first to get a
     kind of 'specification' for how your algorithm should
     work, and you should run these tests before committing
     your code to AWS.
