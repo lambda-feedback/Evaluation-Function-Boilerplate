@@ -6,17 +6,16 @@ class Params(TypedDict):
 
 
 class Result(TypedDict):
-    is_correct: bool
+    preview: Any
 
 
-def evaluation_function(response: Any, answer: Any, params: Params) -> Result:
+def preview_function(response: Any, params: Params) -> Result:
     """
-    Function used to evaluate a student response.
+    Function used to preview a student response.
     ---
-    The handler function passes three arguments to evaluation_function():
+    The handler function passes three arguments to preview_function():
 
     - `response` which are the answers provided by the student.
-    - `answer` which are the correct answers to compare against.
     - `params` which are any extra parameters that may be useful,
         e.g., error tolerances.
 
@@ -28,9 +27,6 @@ def evaluation_function(response: Any, answer: Any, params: Params) -> Result:
     available on pip (provided it is added to requirements.txt).
 
     The way you wish to structure you code (all in this function, or
-    split into many) is entirely up to you. All that matters are the
-    return types and that evaluation_function() is the main function used
-    to output the evaluation response.
+    split into many) is entirely up to you.
     """
-
-    return Result(is_correct=True)
+    return Result(preview=response)

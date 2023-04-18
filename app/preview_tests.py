@@ -1,19 +1,19 @@
 import unittest
 
 try:
-    from .evaluation import Params, evaluation_function
+    from .preview import Params, preview_function
 except ImportError:
-    from evaluation import Params, evaluation_function
+    from preview import Params, preview_function
 
 
-class TestEvaluationFunction(unittest.TestCase):
+class TestPreviewFunction(unittest.TestCase):
     """
     TestCase Class used to test the algorithm.
     ---
     Tests are used here to check that the algorithm written
     is working as it should.
 
-    It's best practise to write these tests first to get a
+    It's best practice to write these tests first to get a
     kind of 'specification' for how your algorithm should
     work, and you should run these tests before committing
     your code to AWS.
@@ -21,15 +21,16 @@ class TestEvaluationFunction(unittest.TestCase):
     Read the docs on how to use unittest here:
     https://docs.python.org/3/library/unittest.html
 
-    Use evaluation_function() to check your algorithm works
+    Use preview_function() to check your algorithm works
     as it should.
     """
 
-    def test_returns_is_correct_true(self):
-        response, answer, params = None, None, Params()
-        result = evaluation_function(response, answer, params)
+    def test_returns_preview_key(self):
+        response, params = "test", Params()
+        result = preview_function(response, params)
 
-        self.assertEqual(result.get("is_correct"), True)
+        self.assertIn("preview", result)
+        self.assertIsNotNone(result["preview"])
 
 
 if __name__ == "__main__":
