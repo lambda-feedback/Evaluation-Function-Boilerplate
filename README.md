@@ -23,8 +23,10 @@ This version is specifically for python, however the ultimate goal is to make si
 app/
     __init__.py
     evaluation.py # Script containing the main evaluation_function
+    preview.py # Script containing the preview_function
     docs.md # Documentation page for this function (required)
     evaluation_tests.py # Unittests for the main evaluation_function
+    preview_tests.py # Unittests for the preview_function
     requirements.txt # list of packages needed for algorithm.py
     Dockerfile # for building whole image to deploy to AWS
 
@@ -53,7 +55,8 @@ config.json # Specify the name of the evaluation function in this file
 5. You are now ready to start developing your function:
    
    - Edit the `app/evaluation.py` file, which ultimately gets called when the function is given the `eval` command
-   - Edit the `app/evaluation_tests.py` file to add tests which get run:
+   - Edit the `app/preview.py` file, which is called when the function is passed the `preview` command.
+   - Edit the `app/evaluation_tests.py` and `app/preview_tests.py` files to add tests which get run:
        - Every time you commit to this repo, before the image is built and deployed 
        - Whenever the `healthcheck` command is supplied to the deployed function
    - Edit the `app/docs.md` file to reflect your changes. This file is baked into the function's image, and is made available using the `docs` command. This feature is used to display this function's documentation on our [Documentation](https://lambda-feedback.github.io/Documentation/) website once it's been hooked up!
@@ -92,5 +95,3 @@ Although all programming can be done through the GitHub interface, it is recomme
 - A code editor such as Atom, VS Code, or Sublime.
 
 Copy this template over by clicking **Use this template** button found in the repository on GitHub. Save it to the `lambda-feedback` Organisation.
-
-## Contact
