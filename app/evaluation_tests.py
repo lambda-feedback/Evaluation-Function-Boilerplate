@@ -1,4 +1,5 @@
 import unittest
+from autotests import auto_test
 
 try:
     from .evaluation import Params, evaluation_function
@@ -6,6 +7,7 @@ except ImportError:
     from evaluation import Params, evaluation_function
 
 
+@auto_test("../eval_tests.yaml", evaluation_function)
 class TestEvaluationFunction(unittest.TestCase):
     """
     TestCase Class used to test the algorithm.
