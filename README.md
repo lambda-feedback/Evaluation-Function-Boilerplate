@@ -59,6 +59,8 @@ config.json # Specify the name of the evaluation function in this file
    - Edit the `app/evaluation_tests.py` and `app/preview_tests.py` files to add tests which get run:
        - Every time you commit to this repo, before the image is built and deployed 
        - Whenever the `healthcheck` command is supplied to the deployed function
+   - Edit the `eval_tests.yaml` file to add tests that get run on the evaluation function as above,
+   but are also added to the documentation as examples.
    - Edit the `app/docs.md` file to reflect your changes. This file is baked into the function's image, and is made available using the `docs` command. This feature is used to display this function's documentation on our [Documentation](https://lambda-feedback.github.io/Documentation/) website once it's been hooked up!
 
 ---

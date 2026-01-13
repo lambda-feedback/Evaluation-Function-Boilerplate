@@ -1,0 +1,9 @@
+# A placeholder test file.
+# The tests described here are run on the evaluation function by Github Actions,
+# and can be used to automatically generate examples for the documentation.
+# You should populate this file with tests for your evaluation function.
+# See https://github.com/lambda-feedback/evaluation-function-auto-tests for a
+# detailed explanation of the test file format.
+---
+title: placeholder
+tests: []
