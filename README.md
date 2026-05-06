@@ -29,8 +29,8 @@ app/
     evaluation.py # Script containing the main evaluation_function
     preview.py # Script containing the preview_function
     docs.md # Documentation page for this function (required)
-    evaluation_tests.py # Unittests for the main evaluation_function
-    preview_tests.py # Unittests for the preview_function
+    evaluation_test.py # Unittests for the main evaluation_function
+    preview_test.py # Unittests for the preview_function
     requirements.txt # list of packages needed for algorithm.py
     Dockerfile # for building whole image to deploy to AWS
 
