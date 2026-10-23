@@ -61,7 +61,7 @@ jobs:
     needs: test
     uses: lambda-feedback/evaluation-function-workflows/.github/workflows/deploy.yml@main
     with:
-      template-repository-name: "lambda-feedback/evaluation-function-boilerplate-python"
+      template-repository-name: "lambda-feedback/Evaluation-Function-Boilerplate"
       build-file: "app/Dockerfile"
       build-context: "./app"
       build-platforms: "aws"
